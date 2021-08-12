@@ -1,0 +1,445 @@
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <!-- <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script> -->
+
+    </head>
+    <body>
+        <!-- 헤더 -->
+       
+        <header class="text-gray-400 bg-gray-900 body-font fixed w-full" >
+            <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center" >
+              <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto fixed-top" id="mainNav" >
+                <a class="mr-5 hover:text-white" href="#Profile">Profile</a>
+                <a class="mr-5 hover:text-white" href="#about">About</a>
+                <a class="mr-5 hover:text-white" href="#student">Great Experience</a>
+                <a class="mr-5 hover:text-white" href="#foreigner">Foreign Experience</a>
+
+              </nav>
+              <a class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-white lg:items-center lg:justify-center mb-4 md:mb-0" href="#all">
+                <img src="logo.png"   stroke-width="0.1" class="w-20 h-20 text-white p-2 bg-indigo-500 rounded-full" >
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <span class="ml-3 text-xl xl:block lg:hidden">SongHeeSeon</span>
+              </a>
+              <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+               
+              </div>
+            </div>
+          </header>
+      
+          <div id="all">
+          <!-- 본인 소개 -->
+          <section class="text-gray-600 body-font overflow-hidden" id="Profile" >
+            <div class="container px-5 py-40 mx-auto">
+              <div class="lg:w-4/5 mx-auto flex flex-wrap">
+              
+                <img alt="ecommerce" class="lg:w-1/2 lg:h-auto object-cover object-center rounded" src="Profile.jpg">
+             
+                <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0" style="margin-top: 150px;">
+                  <h1 class="text-sm text-3xl title-font text-gray-500 tracking-widest">선문대학교 </h1>
+                  <h1 class="text-gray-900 text-2xl title-font font-medium mb-1">경찰행정법학과/컴퓨터공학부</h1>
+              
+                  <p class="leading-relaxed">안녕하세요, 일본에서 풀스텍 개발자가 되기 위해 노력하고 있는 송희선입니다. 아직 일본어 실력과 프로그래밍 실력이 많이 부족하지만 차근차근 노력하고 있습니다. 
+                    반응형 웹 앱에도 관심을 갖고있어 공부하고 있습니다!!
+                    <br> 잘부탁드립니다.
+                  </p>
+                  <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
+                    <div class="flex">
+                    <span class="mr-3" style="margin-top:30px">일본어</span>
+                      <button class="border-2 border-gray-300 rounded-full w-20 h-20 focus:outline-none">JLPT2</button>
+                    </div>
+                  </div>
+                  <div class="flex">
+                    <span class="mr-3" style="margin-top:30px">프로그래밍 언어</span>
+                    <button class="border-2 border-gray-300 rounded-full w-20 h-20 focus:outline-none">PHP</button>
+                    <button class="border-2 border-gray-300 ml-1  rounded-full w-20 h-20 focus:outline-none">JavaScript</button>
+                    <button class="border-2 border-gray-300 ml-1  rounded-full w-20 h-20 focus:outline-none">HTML</button>
+                    <button class="border-2 border-gray-300 ml-1  rounded-full w-20 h-20 focus:outline-none">CSS</button>
+                  
+                  </div>
+              
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <!-- 컨테이너 1  -->
+          <div id = "main">
+<section class="text-gray-400 bg-gray-900 body-font" id="about">
+    <div class="container px-5 py-40 mx-auto">
+      <div class="flex flex-wrap -m-4">
+        <div class="p-4 lg:w-1/3">
+          <div class="h-full bg-gray-800 bg-opacity-40 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+            <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">Hobby</h2>
+            <h1 class="title-font sm:text-2xl text-xl font-medium text-white mb-3">{{ sTitle1 }} </h1>
+            <p class="leading-relaxed mb-3">{{ sContent1 }} </p>
+          
+            <a class="text-indigo-400 inline-flex items-center"><button v-on:click="ChangePage1">송희선 취미 구경하기</button>
+              <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+            <div class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
+              <span class="text-gray-500 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-700 border-opacity-50">
+                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>1.2K
+              </span>
+              <span class="text-gray-500 inline-flex items-center leading-none text-sm">
+                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                </svg>6
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/3">
+          <div class="h-full bg-gray-800 bg-opacity-40 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+            <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">Values</h2>
+            <h1 class="title-font sm:text-2xl text-xl font-medium text-white mb-3">{{ sTitle2 }}</h1>
+            <p class="leading-relaxed mb-3">{{ sContent2 }} </p>
+            <a class="text-indigo-400 inline-flex items-center"><button v-on:click="ChangePage2">내 가치관 찾아보기</button>
+              <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+            <div class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
+              <span class="text-gray-500 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-700 border-opacity-50">
+                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>1.2K
+              </span>
+              <span class="text-gray-500 inline-flex items-center leading-none text-sm">
+                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                </svg>6
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/3">
+          <div class="h-full bg-gray-800 bg-opacity-40 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+            <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">Dream</h2>
+            <h1 class="title-font sm:text-2xl text-xl font-medium text-white mb-3">{{ sTitle3 }}</h1>
+            <p class="leading-relaxed mb-3">{{ sContent3 }} </p>
+            <a class="text-indigo-400 inline-flex items-center"><button v-on:click="ChangePage3">내 꿈 찾아보기</button>
+              <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+            <div class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
+              <span class="text-gray-500 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-700 border-opacity-50">
+                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>1.2K
+              </span>
+              <span class="text-gray-500 inline-flex items-center leading-none text-sm">
+                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                </svg>6
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- 내가 학창시절 열심히했던 활동 -->
+<section class="text-gray-600 body-font" id="student">
+  <div class="container px-5 py-40 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h1 class="text-2xl font-medium title-font mb-4 text-gray-900 tracking-widest">학창시절 가장 열심히한 활동</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">제가 학생때 가장 열심히한 활동은 학교 홍보 활동으로, 학교의 페이스북 계정, 인스타계정, 블로그, 
+        <br>학교의 이런저런 소식들을 전할 수 있는 교수님 교직원분들 및 학생들을 대상으로 한 잡지를 만드는 활동이었습니다
+      <br> SNS를 좋아했던 저는 우연히 활동에 대한 설명을 보고 도전하고 싶어져 참여하게 되었고, 자연스럽게 학생대표가 되었습니다
+    <BR>사실상 죽어있던 인스타 페이스북를 살려내고 새롭게 블로그와 SRT라는 잡지를 제작하는데 저의 팀원 5명이 정말 고생을 많이 했습니다
+    많은 노력끝에 인정을 받아 총장님께서 주시는 최우수상도 받았으며, 지금은 한 때의 힘들었지만 즐거웠던 추억으로 간직하고 있습니다.</p>
+    </div>
+    <div class="flex flex-wrap -m-4">
+      <div class="p-4 lg:w-1/2">
+        <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+          <img alt="team" class="flex-shrink-0 rounded-lg w-60 h-68 object-cover object-center sm:mb-0 mb-4" src="1.JPG">
+          <div class="flex-grow sm:pl-8">
+            <h2 class="title-font font-medium text-lg text-gray-900">SunMoon RC Telecom (SRT 3월호)</h2>
+            <h3 class="text-gray-500 mb-3">2018년도 첫 제작한 잡지</h3>
+            <p class="mb-4">SRT라는 이름하에 교내에 이런저런 활동을 소개하는 <BR>잡지의 제작활동을 하였습니다.
+              <BR>내용으로는 관장님 소개, RC프로그램 소개, 촌장님들의<BR> 인터뷰를 포함했습니다.
+            </p>
+            <span class="inline-flex">
+              <a class="text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 lg:w-1/2">
+        <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+          <img alt="team" class="flex-shrink-0 rounded-lg w-60 h-68 object-cover object-center sm:mb-0 mb-4" src="2.jpg">
+          <div class="flex-grow sm:pl-8">
+            <h2 class="title-font font-medium text-lg text-gray-900">SunMoon RC Telecom (SRT 4월호)</h2>
+            <h3 class="text-gray-500 mb-3">2번째 제작 SRT 잡지</h3>
+            <p class="mb-4">첫 이미지를 뷰티인사이드 영화 포스터를 벤치마킹하여 당시 촌장님들 사진을 찍고 사용했습니다.
+              <BR>내용으로는 센터장님 소개, 사감님들 인터뷰, <BR>촌장님들 인터뷰를 포함했습니다. <BR>해당 잡지들을 10월달까지 총 9개 제작하였습니다.
+            </p>
+            <span class="inline-flex">
+              <a class="text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 lg:w-1/2">
+        <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+          <img alt="team" class="flex-shrink-0 rounded-lg w-60 h-60 object-cover object-center sm:mb-0 mb-4" src="3.JPG">
+          <div class="flex-grow sm:pl-8">
+            <h2 class="title-font font-medium text-lg text-gray-900">선문대학교 페이스북 페이지 이벤트 제작</h2>
+            <h3 class="text-gray-500 mb-3">페이스북 이벤트 개최</h3>
+            <p class="mb-4">SRT의 좋은 사진을 메인으로 걸 수 있도록 그리고 해당 페이지의 활성화를 위해 기획하였으며
+              약 50명의 학우분들이 사진을 보내주셔 선정하여 SRT 메인으로 사용하고 상품을 지급하였습니다.</p>
+            <span class="inline-flex">
+              <a class="text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 lg:w-1/2">
+        <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+          <img alt="team" class="flex-shrink-0 rounded-lg w-60 h-60 object-cover object-center sm:mb-0 mb-4" src="4.JPG">
+          <div class="flex-grow sm:pl-8">
+            <h2 class="title-font font-medium text-lg text-gray-900">선문대학교 SNS 업로드 글</h2>
+            <h3 class="text-gray-500 mb-3">선문대학교 SNS 계정에 SRT소개글 업로드</h3>
+            <p class="mb-4">저희가 직접 운영한 블로그, 인스타, 페이스북, 그리고 SRT잡지까지 잡지에 대해 모르실 거 같아 홍보를 위해
+              직접 카드뉴스를 제작하여 업로드하는 활동을 하였습니다. 이 외에도 약 20개 이상의 카드뉴스 제작 및 배포를 하였습니다.</p>
+            <span class="inline-flex">
+              <a class="text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- 나의 해외 경험  -->
+  <section class="text-gray-400 bg-gray-900 body-font" id="foreigner">
+    <div class="container px-5 py-40 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">나의 해외 경험들</h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">저의 취미는 여행입니다라고 말씀 드렸듯, 어릴적부터 많은 나라들을 방문해 현재 11개의 나라를 방문했으며 <br>제 버킷리스트 중 한가지는 6대륙을 모두 밟아보는 것입니다.<Br>아프리카와 오세아니아, 남아메리카를 기회가 된다면 꼭 밟아보고 싶습니다.</p>
+      </div>
+      <div class="flex flex-wrap -m-4">
+        <div class="lg:w-1/3 sm:w-1/2 p-4">
+          <div class="flex relative">
+               <img alt="gallery" class="absolute inset-0 w-full h-auto  object-cover object-center" src="w1.jpg">
+            <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
+              <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">Philippines</h2>
+              <h1 class="title-font text-lg font-medium text-white mb-3">따나이 지역 봉사활동 / 어학 연수</h1>
+              <p class="leading-relaxed">빈민가의 썩은 하천에서 쓰레기를 걷어올리는 봉사활동을 하였고<br>필리핀대학에서 어학연수를 했습니다.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-1/3 sm:w-1/2 p-4">
+          <div class="flex relative">
+            <img alt="gallery" class="absolute inset-0 w-full h-auto object-cover object-center" src="mal.jpg">
+            <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
+              <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">Malaysia</h2>
+              <h1 class="title-font text-lg font-medium text-white mb-3">교육 봉사, 페인트 봉사</h1>
+              <p class="leading-relaxed">시골 마을 초등학교에 페인트를 칠하는 봉사와, Kpop 춤을 가르치는 교육봉사를 진행했습니다.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-1/3 sm:w-1/2 p-4">
+          <div class="flex relative">
+            <img alt="gallery" class="absolute inset-0  w-full h-auto object-cover object-center" src="england.jpg">
+            <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
+              <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">England</h2>
+              <h1 class="title-font text-lg font-medium text-white mb-3">유럽 여행</h1>
+              <p class="leading-relaxed">동유럽 6개국을 여행했는데 전 영국이 가장 깨끗하고 예뻣던거 같아 제일 좋았던 여행지입니다.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-1/3 sm:w-1/2 p-4">
+          <div class="flex relative">
+            <img alt="gallery" class="absolute inset-0 w-full h-auto object-cover object-center" src="hongkong.jpg">
+            <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
+              <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">Hongkong</h2>
+              <h1 class="title-font text-lg font-medium text-white mb-3">홍콩 여행(with Father)</h1>
+              <p class="leading-relaxed">2017년도 여름, 아버지와 둘이 다녀온 홍콩입니다. 이젠 이떄의 분위기는 없겠죠..?</p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-1/3 sm:w-1/2 p-4">
+          <div class="flex relative">
+            <img alt="gallery" class="absolute inset-0  w-full h-auto object-cover object-center" src="france.jpg">
+            <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
+              <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">France</h2>
+              <h1 class="title-font text-lg font-medium text-white mb-3">유럽 여행</h1>
+              <p class="leading-relaxed">2016년 여름에 다녀온, 다른건 모르겠지만, 에펠탑 하나만큼은 최고였던 프랑스였습니다.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-1/3 sm:w-1/2 p-4" onclick.href="japan.jpg"> 
+          <div class="flex relative">
+            <img alt="gallery" class="absolute inset-0  w-full h-auto object-cover object-center" src="japan.jpg">
+            <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
+              <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">Japan</h2>
+              <h1 class="title-font text-lg font-medium text-white mb-3">일본 여행 및 외가댁 방문</h1>
+              <p class="leading-relaxed">가족 다같이 외가댁에 방문하며 제사도 지내고, 가족들끼리의 시간을 보냈었습니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+
+  <!-- 푸터 -->
+  <footer class="text-gray-400 bg-gray-900 body-font">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+        <img src="logo.png"   stroke-width="0.1" class="w-20 h-20 text-white p-2 bg-indigo-500 rounded-full" >
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="ml-3 text-xl">SongHeeSeon</span>
+      </a>
+      <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2021 SongHeeSeon —
+        <a href="" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">Heesun Song</a>
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a class="text-gray-400">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-400">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-400">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-400">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </footer>
+</div>
+
+  <script>
+  
+
+    var app2 = new Vue({
+      el: '#main', 
+      data: {
+        sTitle1: '취미',
+        sTitle2: '가치관',
+        sTitle3: '꿈',  
+
+        sContent1: '저의 취미는 여행하며 사진 및 영상찍기, 게임, 영상편집, 해외 주화들  모으기, 피아노치기 입니다! .',
+        sContent2: '제 가치관은 가족내의 유대감 및 애정을 중요시하고, 주위 사람들에게 선한 영향력을 끼칠 수 있도록 노력합니다.',
+        sContent3: '꿈 이야기만하면 나에대해 잘 안다고 생각했지만 이때만큼은 날 잘 모르는거 같네요, 당신은 꿈이 있나요?',
+        },
+        methods: {
+            ChangePage1(){
+                location.href="https://www.youtube.com/channel/UCPna8UQXbNXBm3Ts0WiyOmw"
+            },
+            ChangePage2(){
+                location.href="https://www.youtube.com/watch?v=uWIf_lNNlsc&ab_channel=%EC%B5%9C%EC%9D%B4%EC%86%94"
+            },
+            ChangePage3(){
+                location.href="https://www.youtube.com/watch?v=ltBOX8TlNT0&ab_channel=%EC%A0%9C%EC%9E%84%EC%8A%A4%EB%B9%84%EB%94%94%EC%98%A4Jamesvideo"     
+            }
+        }
+
+      }
+    );
+
+
+    // 랜덤함수 
+    function Rand(min, max){
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max -min)) + min;
+    }
+
+      </script>
+
+</body>
+</html>
