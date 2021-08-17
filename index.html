@@ -7,7 +7,14 @@
 
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <link rel="stylesheet" href="modal.css" /> 
         <!-- <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script> -->
+        
+        <script >
+        function close_snack() {
+          $('#open-modal').hide();
+        };
+        </script>
 
     </head>
     <body>
@@ -16,7 +23,9 @@
         <header class="text-gray-100 bg-blue-800 body-font fixed w-full z-10"  >
             <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center" >
               <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto fixed-top" id="mainNav" >
+                
                 <a class="mr-5 hover:text-black" href="#Profile">Profile</a>
+                <a class="mr-5 hover:text-black" href="#project">ProJect</a>
                 <a class="mr-5 hover:text-black" href="#about">About</a>
                 <a class="mr-5 hover:text-black" href="#student">Great Experience</a>
                 <a class="mr-5 hover:text-black" href="#foreigner">Foreign Experience</a>
@@ -28,24 +37,22 @@
                 </svg>
                 <span class="ml-3 text-xl xl:block lg:hidden">SongHeeSeon</span>
               </a>
-              <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
-               
+              <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0"> 
               </div>
             </div>
           </header>
+        
       
           <div id="all">
           <!-- 본인 소개 -->
+          
           <section class="text-gray-600 body-font overflow-hidden" id="Profile" >
             <div class="container px-5 py-40 mx-auto">
               <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              
-                <img alt="ecommerce" class="lg:w-1/2 lg:h-auto object-cover object-center rounded" src="Profile.jpg">
-             
+                <img alt="ecommerce" class="lg:w-1/2 lg:h-auto object-cover object-center rounded" src="Profile.jpg">            
                 <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                   <h1 class="text-sm text-3xl title-font text-gray-500 tracking-widest"><b>선문대학교 </b></h1>
-                  <h1 class="text-gray-900 text-2xl title-font font-medium mb-1"><b>경찰행정법학과/컴퓨터공학부</b></h1>
-              
+                  <h1 class="text-gray-900 text-2xl title-font font-medium mb-1"><b>경찰행정법학과/컴퓨터공학부</b></h1>            
                   <p class="leading-relaxed">안녕하세요! <p style="color:rgb(255, 0, 0);"><B>일본에서 풀스텍 개발자가 되기 위해 노력하고 있는 송희선입니다.</B></p> 아직 일본어 실력과 프로그래밍 실력이 많이 부족하지만 차근차근 노력하고 있습니다. 
                     반응형 웹 앱에도 관심을 갖고있어 공부하고 있습니다!!
                     <br> 잘부탁드립니다.
@@ -56,7 +63,6 @@
                       <button class="border-2 border-gray-300 rounded-full w-20 h-20 focus:outline-none ml-16">JLPT2</button>
                     </div>
                   </div>
-
                   <div class="flex">
                     <span class="mr-3" style="margin-top:30px"><b>프로그래밍 언어</b></span>
                     <button class="border-2 border-gray-300 rounded-full w-20 h-20 focus:outline-none">PHP</button>
@@ -64,13 +70,11 @@
                     <button class="border-2 border-gray-300 ml-1  rounded-full w-20 h-20 focus:outline-none">HTML</button>
                     <button class="border-2 border-gray-300 ml-1  rounded-full w-20 h-20 focus:outline-none">CSS</button>
                   </div>
-
                     <div class="flex py-5">
                     <span class="mr-3" style="margin-top:30px"><b>데이터베이스</b></span>
                     <button class="border-2 border-gray-300 rounded-full w-20 h-20 focus:outline-none ml-4">MySQL</button>
                     <button class="border-2 border-gray-300 ml-1  rounded-full w-20 h-20 focus:outline-none">MariaDB</button>
                   </div>
-
                   <div class="flex">
                     <span class="mr-3" style="margin-top:30px"><b>프레임워크</b></span>
                       <button class="border-2 border-gray-300 rounded-full w-20 h-20 focus:outline-none ml-8" >BootStrap</button>
@@ -86,14 +90,65 @@
                     </a>
                     <img src="email_tel.jpg" style="margin-left:100px; margin-top:-80">
                   </div>
-
-             
-              
                 </div>
               </div>
             </div>
           </section>
+
+
+           
+          <!-- 프로젝트 -->
+         <div id="project">
+     
+          <section class="text-gray-600 body-font overflow-hidden">
           
+            <div class="container px-5 py-24 mx-auto">
+              <h1 class="text-5xl font-medium title-font text-gray-900 tracking-widest flex flex-col text-center w-full py-12"><b>[ ProJect ]</b></h1>
+              <div class="lg:w-4/5 mx-auto flex flex-wrap">
+                <img alt="ecommerce" class="w-2/4 h-auto object-cover object-center rounded px-1" src="smoda.kr_A_team_Project_.png">
+                <img alt="ecommerce" class="w-2/4 h-auto object-cover object-center rounded px-1" src="moviekiosk.jpg">
+                <div class="lg:w-4/4 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0 text-center content-center" >
+                  <h2 class="text-sm title-font text-gray-500 tracking-widest">Project1</h2>
+                  <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Movie Kiosk</h1>
+         
+                  <p class="leading-relaxed">CGV의 예매 키오스크를 벤치마킹하여 더블클릭을 통해 전체화면으로 변경 뒤 Ajax를 사용하여 비동기 화면 이동을 통해 전체화면이 깨지지 않는 상태에서
+                    이루어질 수 있도록 구성하였고, 저는 영화 예매부분의 프론트엔드 부분을 전담하여 받아 진행했습니다. 
+                  이 프로젝트를 진행하면서, <br>Jquery, JavaScript를 보다 능숙하게 활용할 수 있었습니다.</p></p>
+                  <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
+                  </div>
+                  <div class="flex">
+                    <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded" onclick="location.href='http://smoda.kr/A_team_Project/'">MovieKiosk 바로가기</button>            
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="text-gray-600 body-font overflow-hidden">
+            <div class="container px-5 mx-auto">
+              <div class="lg:w-4/5 mx-auto flex flex-wrap">
+                <img alt="ecommerce" class="w-2/4 h-auto object-cover object-center rounded px-1" src="smoda.kr_WhatWillWeHave_index.php.png">
+                <img alt="ecommerce" class="w-2/4 h-auto object-cover object-center rounded px-1" src="moviekiosk.jpg">
+                <div class="lg:w-4/4 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0 text-center content-center" >
+                  <h2 class="text-sm title-font text-gray-500 tracking-widest">Project2</h2>
+                  <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">What shoud i eat today?</h1>
+         
+                  <p class="leading-relaxed">오늘 뭐먹지라는 웹사이트는, 현대 사회에서 무엇을 먹을지 고민하는 사람들에게 무작위의 음식 중 룰렛을 돌려 선택할 수 있고 해당 
+                    음식을 네이버지도와 연결하여 내 근처 어디에서 먹을 수 있는지 알아보는 프로그램이다. 나는 이 프로그램에서 로그인 및 회원가입의 JavaScript를 사용한 프론트엔드, PHP를 통해
+                  MariaDB와 연결해 회원가입 정보를 저장, 게시판 글을 데이터베이스에 저장하는 백엔드 프로그래밍을 하였다.</p></p>
+                  <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
+                  </div>
+                  <div class="flex">
+                    <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded" onclick="location.href='http://smoda.kr/WhatWillWeHave/'">What shoud i eat today? 바로가기</button>            
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+         
+
           <!-- 컨테이너 1  -->
           <div id = "main">
 <section class="text-gray-400 bg-gray-800 body-font" id="about">
@@ -194,10 +249,10 @@
     <BR>사실상 죽어있던 인스타 페이스북를 살려내고 새롭게 블로그와 SRT라는 잡지를 제작하는데 저의 팀원 5명이 정말 고생을 많이 했습니다
     많은 노력끝에 인정을 받아 총장님께서 주시는 최우수상도 받았으며, 지금은 한 때의 힘들었지만 즐거웠던 추억으로 간직하고 있습니다.</b></p>
     </div>
-    <div class="flex flex-wrap -m-4">
+    <div class="flex flex-wrap -m-4" id="app">
       <div class="p-4 lg:w-1/2">
         <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-          <img alt="team" class="flex-shrink-0 rounded-lg w-60 h-68 object-cover object-center sm:mb-0 mb-4" src="1.JPG">
+          <img id="show-modal" v-on:click="open()"; alt="team" class="flex-shrink-0 rounded-lg w-60 h-68 object-cover object-center sm:mb-0 mb-4" src="1.JPG">
           <div class="flex-grow sm:pl-8">
             <h2 class="title-font font-medium text-lg text-gray-900">SunMoon RC Telecom (SRT 3월호)</h2>
             <h3 class="text-gray-500 mb-3">2018년도 첫 제작한 잡지</h3>
@@ -384,7 +439,6 @@
     </div>
   </section>
 
- 
 
   <!-- 푸터 -->
   <footer class="text-gray-400 bg-blue-800 body-font">
@@ -419,7 +473,7 @@
 </div>
 
   <script>
-  
+  var snackmodal = document.getElementsByClassName("modal-window")[0];
 
     var app2 = new Vue({
       el: '#main', 
@@ -443,7 +497,6 @@
                 location.href="https://www.youtube.com/watch?v=ltBOX8TlNT0&ab_channel=%EC%A0%9C%EC%9E%84%EC%8A%A4%EB%B9%84%EB%94%94%EC%98%A4Jamesvideo"     
             }
         }
-
       }
     );
 
