@@ -7,20 +7,24 @@
 
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-     
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel="stylesheet" href="./style.css">
+
+        <link rel="stylesheet" href="assets/css/main.css" />
+
+        	<!-- Bootstrap  -->
+	      
+        <link rel="stylesheet" href="assets/css/style.css"> 
+        <link rel="stylesheet" href="assets/css/bootstrap.css"> 
         <!-- <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script> -->
         
-        <script >
-        function close_snack() {
-          $('#open-modal').hide();
-        };
-        </script>
+   
 
     </head>
     <body>
         <!-- 헤더 -->
        
-        <header class="text-gray-100 bg-blue-800 body-font fixed w-full z-10"  >
+        <header class="text-gray-100 bg-blue-800 body-font fixed w-full z-10"  style="margin-top:-50px">
             <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center" >
               <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto fixed-top" id="mainNav" >
                 
@@ -34,9 +38,8 @@
               <a class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-white lg:items-center lg:justify-center mb-4 md:mb-0" href="#all">
                 <img src="logo.png"   stroke-width="0.1" class="w-20 h-20 text-white p-2 bg-purple-400 rounded-3xl" >
                   <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                </svg>
-                <span class="ml-3 text-xl xl:block lg:hidden">SongHeeSeon</span>
-              </a>
+           
+                <span class="ml-3 text-xl xl:block lg:hidden">SongHeeSeon</span></a>
               <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0"> 
               </div>
             </div>
@@ -46,36 +49,51 @@
           <div id="all">
           <!-- 본인 소개 -->
           
-          <section class="text-gray-600 body-font overflow-hidden" id="Profile" >
+          <section class="text-gray-600 body-font overflow-hidden" id="Profile" style="margin-top:0px;">
             <div class="container px-5 py-40 mx-auto">
               <div class="lg:w-4/5 mx-auto flex flex-wrap">
-                <img alt="ecommerce" class="lg:w-1/2 lg:h-auto object-cover object-center rounded" src="Profile.jpg">            
-                <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                <img alt="ecommerce" class="lg:w-1/2 lg:h-1/2 object-cover object-center rounded" src="Profile.jpg" style="margin-top:-30px;">            
+                <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0" style="margin-top:-70px;">
                   <h1 class="text-sm text-3xl title-font text-gray-500 tracking-widest"><b>선문대학교 </b></h1>
                   <h1 class="text-gray-900 text-2xl title-font font-medium mb-1"><b>경찰행정법학과/컴퓨터공학부</b></h1>            
-                  <p class="leading-relaxed">안녕하세요! <p style="color:rgb(255, 0, 0);"><B>일본에서 풀스텍 개발자가 되기 위해 노력하고 있는 송희선입니다.</B></p> 아직 일본어 실력과 프로그래밍 실력이 많이 부족하지만 차근차근 노력하고 있습니다. 
-                    반응형 웹 앱에도 관심을 갖고있어 공부하고 있습니다!!
-                    <br> 잘부탁드립니다.
+                  <p class="leading-relaxed">안녕하세요! 다양한 도전을 통해 스스로 성장하자!라는 모토를 가진<p style="color:rgb(255, 0, 0); margin-top:-30px;"><B>일본에서 풀스텍 개발자가 되기 위해 노력하고 있는 송희선입니다.</B>
                   </p>
                   <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
                     <div class="flex">
                     <span class="mr-3" style="margin-top:30px"><b>일본어</b></span>
-                      <button class="border-2 border-gray-300 rounded-full w-20 h-20 focus:outline-none ml-16">JLPT2</button>
+                      <button class="border-2 border-gray-300 rounded-full w-20 h-20 focus:outline-none ml-16" style="margin-left:-5px;">JLPT2</button>
+                      <span class="mr-3" style="margin-top:30px; margin-left:20px;"><b>데이터베이스</b></span>
+                      <button class="border-2 border-gray-300 rounded-full w-20 h-20 focus:outline-none ml-4" style="margin-left:-5px;">MySQL</button>
+                      <button class="border-2 border-gray-300 ml-1  rounded-full w-20 h-20 focus:outline-none">MariaDB</button>
                     </div>
                   </div>
-                  <div class="flex">
+                  <!-- <img src="./grade.jpg" style="height: 15%; width: 500px;"> -->
+                  <div class="chartBarsWrap chartBarsHorizontal" style="margin-top:-40px; margin-left:0px"> 
+                    <div class="chartBars"> 
+                        <ul class="bars">  
+                            <li> 
+                                <div data-percentage="75" class="bar redFlat"></div><b style="color:black; size:15px; ">HTML/CSS</b></li>
+                            <li>
+                                <div data-percentage="50" class="bar orangeBarFlat"></div><b style="color:black">JavaScript</b></li>
+                            <li>
+                                <div data-percentage="50" class="bar yellowBarFlat"></div><b style="color:black">PHP</b></li>
+                            <li>
+                                <div data-percentage="25" class="bar blueBarFlat"></div><b style="color:black">Java</b></li>
+                            <li>
+                                <div data-percentage="25" class="bar purpleBarFlat"></div><b style="color:black">Python</b></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                  <!-- <div class="flex">
                     <span class="mr-3" style="margin-top:30px"><b>프로그래밍 언어</b></span>
                     <button class="border-2 border-gray-300 rounded-full w-20 h-20 focus:outline-none">PHP</button>
                     <button class="border-2 border-gray-300 ml-1  rounded-full w-20 h-20 focus:outline-none">JavaScript</button>
                     <button class="border-2 border-gray-300 ml-1  rounded-full w-20 h-20 focus:outline-none">HTML</button>
                     <button class="border-2 border-gray-300 ml-1  rounded-full w-20 h-20 focus:outline-none">CSS</button>
-                  </div>
-                    <div class="flex py-5">
-                    <span class="mr-3" style="margin-top:30px"><b>데이터베이스</b></span>
-                    <button class="border-2 border-gray-300 rounded-full w-20 h-20 focus:outline-none ml-4">MySQL</button>
-                    <button class="border-2 border-gray-300 ml-1  rounded-full w-20 h-20 focus:outline-none">MariaDB</button>
-                  </div>
-                  <div class="flex">
+                  </div> -->
+
+                  <div class="flex" style="margin-top:-80px">
                     <span class="mr-3" style="margin-top:30px"><b>프레임워크</b></span>
                       <button class="border-2 border-gray-300 rounded-full w-20 h-20 focus:outline-none ml-8" >BootStrap</button>
                       <button class="border-2 border-gray-300 ml-1  rounded-full w-20 h-20 focus:outline-none">Tailwind</button>
@@ -88,9 +106,9 @@
                   <div>
                     <a href="https://github.com/songheeseon">
                     <img src="githublogo.png" style="width:15%; margin-top: 20px;">
-                    <h1><B>GITHUB</B></h1>
+                  
                     </a>
-                    <img src="email_tel.jpg" style="margin-left:100px; margin-top:-100">
+                    <img src="email_tel.jpg" style="margin-left:100px; margin-top:-80">
                   </div>
                 </div>
               </div>
@@ -98,7 +116,6 @@
           </section>
 
 
-           
           <!-- 프로젝트 -->
          <div id="project">
      
@@ -106,8 +123,8 @@
           
             <div class="container px-5 py-36 mx-auto">
               <h1 class="text-2xl font-medium title-font text-gray-900 tracking-widest flex flex-col text-center w-full "><b>[ Project1 ]</b></h1>
-              <h1 class="text-7xl font-medium title-font text-gray-900 tracking-widest flex flex-col text-center w-full py-4"><b>Movie Kiosk</b></h1>
-              <b><p class="leading-relaxed text-xl lg:w-4/5 mx-auto flex flex-wrap text-center py-2">어디라도 영화관 키오스크처럼 예매할 수 있는 프로그램이 있으면 좋겠다!! 라는 마음으로 시작된 프로젝트로<br> 
+              <h1 class="text-7xl font-medium title-font text-gray-900 tracking-widest flex flex-col text-center w-full py-4" style="margin-top:-20px;"><b>Movie Kiosk</b></h1>
+              <b><p class="leading-relaxed text-xl lg:w-4/5 mx-auto flex flex-wrap text-center py-2" style="margin-top:-40px;">어디라도 영화관 키오스크처럼 예매할 수 있는 프로그램이 있으면 좋겠다!! 라는 마음으로 시작된 프로젝트로<br> 
               (1) 광고 상영  (2)예매 및 발권 버튼을 통해 원하는 기능을 수행  (3) 결제 전 스낵바의 이용  (4) 총 가격 결제의 순서로 작동합니다.<br>
               </p></b>
          
@@ -137,8 +154,8 @@
           <section class="text-gray-600 body-font overflow-hidden">
             <div class="container px-5 py-2 mx-auto">
               <h1 class="text-2xl font-medium title-font text-gray-900 tracking-widest flex flex-col text-center w-full "><b>[ Project2 ]</b></h1>
-              <h1 class="text-7xl font-medium title-font text-gray-900 tracking-widest flex flex-col text-center w-full py-4"><b>What Should i eat?</b></h1>
-              <b><p class="leading-relaxed text-xl lg:w-4/5 mx-auto flex flex-wrap text-center py-2">항상 무엇을 먹을지 고민하는 현대인들에게, 재밌게 추천해주는 프로그램을 만들자!라는 프로젝트로!<br> 
+              <h1 class="text-7xl font-medium title-font text-gray-900 tracking-widest flex flex-col text-center w-full py-4" style="margin-top:-20px;"><b>What Should i eat?</b></h1>
+              <b><p class="leading-relaxed text-xl lg:w-4/5 mx-auto flex flex-wrap text-center py-2" style="margin-top:-40px;" >항상 무엇을 먹을지 고민하는 현대인들에게, 재밌게 추천해주는 프로그램을 만들자!라는 프로젝트로!<br> 
               (1)여러 종류들의 각각의 메뉴들을 무작위로 돌리는 룰렛기능 (2) 선호도에 따른 종류 추가/삭제 기능  (3) 로그인을 통한 게시판기능  (4) 룰렛결과를 네이버지도와 연동해 근처 음식점 찾기의 순서로 작동합니다!<br>
              
               </p></b>
@@ -165,9 +182,38 @@
               </div>
             </div>
           </section>
+
+          
         </div>
 
-         
+        <div id="fh5co-work" class="fh5co-bg-dark" >
+          <div class="container" >
+            <div class="row animate-box">
+              <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                <h1 style="font-size:50px; color:white"> Toy Project</h1>
+              </div>
+            </div>
+     
+              <div class="col-md-3 text-center col-padding animate-box" style="margin-right:-5px;">
+                <a id="demo01" href="#" onclick="return false;" class="work" style="background-image: url(Magic.png);">
+                  <div class="desc">
+                    <h3>Magic game site</h3>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-md-3 text-center col-padding animate-box" style="margin-left:5px;">
+                <a id="demo02" href="#" onclick="return false;" class="work" style="background-image: url(rtxgame.png);">
+                  <div class="desc">
+                    <h3>Tour Review Site</h3>
+                
+                  </div>
+                </a>
+              </div>
+       
+          </div>
+        </div>
+      
 
           <!-- 컨테이너 1  -->
           <div id = "main">
@@ -187,17 +233,7 @@
               </svg>
             </a>
             <div class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
-              <span class="text-gray-500 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-700 border-opacity-50">
-                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>1.2K
-              </span>
-              <span class="text-gray-500 inline-flex items-center leading-none text-sm">
-                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
-                </svg>6
-              </span>
+
             </div>
           </div>
         </div>
@@ -206,24 +242,14 @@
             <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">Values</h2>
             <h1 class="title-font sm:text-3xl font-medium text-white mb-3">{{ sTitle2 }}</h1>
             <p class="leading-relaxed mb-3 text-xl">{{ sContent2 }} </p>
-            <a class="text-indigo-400 inline-flex items-center"><button v-on:click="ChangePage2">내 가치관 찾아보기</button>
+            <a class="text-indigo-400 inline-flex items-center"><button v-on:click="ChangePage2">다양한 봉사활동 경험!</button>
               <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M5 12h14"></path>
                 <path d="M12 5l7 7-7 7"></path>
               </svg>
             </a>
             <div class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
-              <span class="text-gray-500 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-700 border-opacity-50">
-                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>1.2K
-              </span>
-              <span class="text-gray-500 inline-flex items-center leading-none text-sm">
-                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
-                </svg>6
-              </span>
+    
             </div>
           </div>
         </div>
@@ -232,25 +258,13 @@
             <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">Dream</h2>
             <h1 class="title-font sm:text-3xl text-xl font-medium text-white mb-3">{{ sTitle3 }}</h1>
             <p class="leading-relaxed mb-3 text-xl">{{ sContent3 }} </p>
-            <a class="text-indigo-400 inline-flex items-center"><button v-on:click="ChangePage3">내 꿈 찾아보기</button>
+            <!-- <a class="text-indigo-400 inline-flex items-center"><button v-on:click="ChangePage3">내 꿈 찾아보기</button>
               <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M5 12h14"></path>
                 <path d="M12 5l7 7-7 7"></path>
               </svg>
-            </a>
-            <div class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
-              <span class="text-gray-500 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-700 border-opacity-50">
-                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>1.2K
-              </span>
-              <span class="text-gray-500 inline-flex items-center leading-none text-sm">
-                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
-                </svg>6
-              </span>
-            </div>
+            </a> -->
+
           </div>
         </div>
       </div>
@@ -264,11 +278,9 @@
     <div class="flex flex-col text-center w-full mb-20">
       <h1 class="text-4xl font-medium title-font mb-4 text-gray-900 tracking-widest"><b>[ 학창시절 가장 열심히한 활동 ]</b></h1>
       <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-2xl"><b>제가 학생때 가장 열심히한 활동은 학교 홍보 활동으로, 학교의 페이스북 계정, 인스타계정, 블로그, 
-        학교의 이런저런 소식들을 전할 수 있는 교수님 교직원분들 및 학생들을 대상으로 한 잡지를 만드는 활동이었습니다
-     SNS를 좋아했던 저는 우연히 활동에 대한 설명을 보고 도전하고 싶어져 참여하게 되었고, 학생대표로 선출 되었습니다
+        학교의 이런저런 소식들을 전할 수 있는 교수님 교직원분들 및 학생들을 <br>대상으로 한 잡지를 만드는 활동이었습니다
      <br>
-    <BR>사실상 죽어있던 인스타 페이스북를 살려내고 새롭게 블로그와 SRT라는 잡지를 제작하는데 정말 많은 시간을 할애했고,
-    많은 노력을 통해 인정을 받아 총장님께서 주시는 최우수상도 받았으며, 즐거웠던 추억으로 간직하고 있습니다.</b></p>
+    <BR>많은 노력을 통해 이 활동에서 노출도 2배이상 상승이라는 성과를 내어, 인정을 받아 총장님께서 주시는 최우수상과 장학금을 받았던 경험이 있습니다.</b></p>
     </div>
     <div class="flex flex-wrap -m-4" id="app">
       <div class="p-4 lg:w-1/2">
@@ -462,7 +474,6 @@
     </div>
   </section>
 
-
   <!-- 푸터 -->
   <footer class="text-gray-400 bg-blue-800 body-font">
     <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
@@ -493,6 +504,8 @@
       </span>
     </div>
   </footer>
+
+
 </div>
 
   <script>
@@ -505,9 +518,9 @@
         sTitle2: '가치관',
         sTitle3: '꿈',  
 
-        sContent1: '저의 취미는 여행하며 사진 및 영상찍기, 게임, 영상편집, 해외 주화들  모으기, 피아노치기 입니다!! 그리고 가끔이지만 영상촬영한 것들을 편집하여 유튜브에 공유하고 있습니다!',
-        sContent2: '제 가치관은 가족내의 유대감 및 애정을 중요시하고, 주위 사람들에게 선한 영향력을 끼칠 수 있도록 노력하는 것입니다. 나 혼자만의 세상이 아니기 때문에 다같이 행복했으면 하는 바람이 있습니다.',
-        sContent3: '제 꿈은 저의 훌륭한 아버지보다 더 멋진 아버지가 되는것이며, 버킷리스트로는 5대륙 여행해보기, 4개국어를 할 수 있는 사람이 되기, 제 주위사람들 앞에서 좋은 피아노 곡 연주하기입니다!',
+        sContent1: '저의 취미는 여행하며 사진 및 영상찍기, 해외 주화 모으기, 피아노치기 입니다!! 그리고 가끔이지만 영상촬영한 것들을 편집하여 유튜브에 공유하고 있습니다!',
+        sContent2: '저는 인간관계를 중요시하고, 주위 사람들에게 선한 영향력을 끼칠 수 있도록 노력하는 것입니다. 그런 사람이 되기 위해 봉사활동 및 스스로의 성장에 노력하고있습니다!',
+        sContent3: '제 꿈은 2가지로 전세계의 많은 사람들에게 도움이 될 수 있는 프로그램을 개발하기, 제 아버지보다 더 훌륭한 아버지되기입니다.',
         },
         methods: {
             ChangePage1(){
@@ -523,15 +536,102 @@
       }
     );
 
-
-    // 랜덤함수 
-    function Rand(min, max){
-      min = Math.ceil(min);
-      max = Math.floor(max);
-      return Math.floor(Math.random() * (max -min)) + min;
-    }
-
       </script>
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
 
+
+
+ 
+ <script src="assets/js/jquery.scrollex.min.js"></script>
+ <script src="assets/js/browser.min.js"></script>
+ <script src="assets/js/breakpoints.min.js"></script>
+
+ <script src="assets/js/main.js"></script>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ <script src="assets/js/bootstrap.min.js"></script>
+
+ <!-- jQuery -->
+ <script src="./js/jquery.min.js"></script>
+ <!-- jQuery Easing -->
+
+ <!-- Waypoints -->
+ <script src="./js/jquery.waypoints.min.js"></script>
+ <!-- Stellar Parallax -->
+ <script src="./js/jquery.stellar.min.js"></script>
+
+ <!-- Main -->
+ <script src="./js/main.js"></script>
+ 
+ <!-- modal content -->
+
+ <div class="modal_background">
+
+       <div class="modal_box">
+
+     <div style="text-align: center; margin-top: 5%;">
+       <h1 class="jp">手品のゲームサイト</h1>
+       <p style="border-bottom: solid 1px black; width: 70%; margin-left: 15%;"></p>
+     </div>
+
+     <a href="" onclick="return false;"><img src="./images/pj3_con.jpg" style="float: left; width: 50%; height: 70%; margin-top: 2%; margin-left: 2%" class="c1"></a>
+     
+     <div style="float: left; width: 40%; height: 100%; margin-left: 5%; margin-top:5%;">
+       <h3 class="jp">開発期間: 2日</h3> 
+       <h3 class="jp">概要: アルゴリズムを活用し、サイト利用者が選んだ数字を当たるプログラム</h3>
+       <h3 class="jp">技術: HTML,CSS,PHP</h3>
+       <h3 class="jp">感じた事: <li>アルゴリズム及び関数の使い方が分かりました。</li>
+                   <li>関数の原理が良く理解できました。</li>
+                 </h3>
+       <div style="float: left; margin-top: 10%;">
+         <button class="btbt btbt2" type="button" onclick="window.open('http://smoda.kr/mgcu/woo/magic.html')">Learn More</button>
+       </div>
+       <div style="float: left; margin-top: 10%; margin-left: 5%;">
+         <button class="btbt btbt2" type="button" onclick="window.open('https://github.com/Puretty/magic')">Git Hub</button>
+       </div>
+     </div>
+       </div>
+   </div>
+ 
+
+ <div class="modal_background2">
+
+       <div class="modal_box">
+
+     <div style="text-align: center; margin-top: 5%;">
+       <h1 class="jp">レビューサイト</h1>
+       <p style="border-bottom: solid 1px black; width: 70%; margin-left: 15%;"></p>
+     </div>
+
+     <a href="" onclick="return false;"><img src="./images/pj1_con.jpg" style="float: left; width: 50%; height: 70%; margin-top: 2%; margin-left: 2%"></a>
+     
+     <div style="float: left; width: 40%; height: 100%; margin-left: 5%; margin-top:8%;">
+       <h3 class="jp">開発期間: 2日</h3> 
+       <h3 class="jp">内容: 各季節で人気のある日本の観光地を紹介するサイトです。JSとjQueryのを使い、動的ウェブページの具現に励ました。</h3>
+       <h3 class="jp">技術: HTML,CSS,JS,jQuery</h3>
+       <h3 class="jp">感じた事: <li>JSとjQueryの使い方が分かりました。</li>
+                   <li>動的ページという概念を理解しました。</li>
+                   </h3>
+       <div style="float: left; margin-top: 5%;">
+         <button class="btbt btbt2" type="button" onclick="window.open('http://www.smoda.kr/mp/woo/')">Learn More</button>
+       </div>
+       <div style="float: left; margin-top: 5%; margin-left: 5%;">
+         <button class="btbt btbt2" type="button" onclick="window.open('https://github.com/Puretty/tour_website')">Git Hub</button>
+       </div>
+     
+     </div>
+       </div>
+   </div>
+
+
+
+
+   <script type="text/javascript">
+		var img = document.getElementsByTagName("img");
+			for (var x = 0; x < img.length; x++) {
+			  img.item(x).onclick=function() {window.open(this.src)}; 
+			}
+
+		</script>
 </body>
 </html>
