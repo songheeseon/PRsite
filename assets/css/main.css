@@ -440,11 +440,6 @@ input, select, textarea {
 	}
 
 
-
-	p, ul, ol, dl, table {
-		margin-bottom: 1em;
-	}
-
 /* Box */
 
 	.box {
