@@ -161,6 +161,9 @@
 .bars li .bar.purpleBarFlat {
   background-color: #6e46af;
 }
+.bars li .bar.GreenBarFlat {
+  background-color: #7febd0;
+}
 .box-piesite {
   text-align: center;
   font-size: 22px;

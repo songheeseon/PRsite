@@ -793,6 +793,21 @@ input[type="text"] {
   overflow: auto;
 }
 
+.modal_box1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 90%;
+  height: 85%;
+  overflow: auto;
+}
+
 .modal_box::-webkit-scrollbar{
   display: none;
 }
