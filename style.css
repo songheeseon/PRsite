@@ -1,3 +1,4 @@
+
 .chartBarsWrap {
   padding-left: 40px;
   margin: 0 30px 0 20px;
@@ -116,8 +117,8 @@
 }
 .chartBarsWrap.chartBarsHorizontal .chartBars .bars .bar {
   width: 0;
-  padding-top: 10px;
-  height: 100% !important;
+  padding-top:1px;
+  height: 95% !important;
   text-align: right;
   font-size: 1.5em;
   -webkit-transition: 2s width cubic-bezier(0.6, 0.4, 0.4, 1.1);
@@ -139,7 +140,10 @@
   background: radial-gradient(#8abff4, #49E);
 }
 .bars li .bar.blueBarFlat {
-  background-color: #49E;
+  background-color: rgb(7, 52, 97);
+}
+.bars li .bar.skyBarFlat {
+  background-color: rgb(13, 124, 235);
 }
 .bars li .bar.orangeBar {
   background-color: orange;
@@ -152,7 +156,7 @@
   background-color: red;
 }
 .bars li .bar.yellowBarFlat {
-  background-color: rgb(221, 221, 12);
+  background-color: rgb(238, 238, 25);
 }
 .bars li .bar.purpleBar {
   background-color: #6e46af;
@@ -162,7 +166,7 @@
   background-color: #6e46af;
 }
 .bars li .bar.GreenBarFlat {
-  background-color: #7febd0;
+  background-color: #0cb188;
 }
 .box-piesite {
   text-align: center;
